@@ -11,21 +11,35 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('image2.jpg') no-repeat center center/cover;
+            background: url('image.jpg') no-repeat center center/cover;
+            background-size: cover; /* Ensure the background covers the screen */
             overflow: hidden;
             font-family: 'Helvetica Neue', sans-serif;
         }
 
         .bouncing-text {
             font-size: 2em;
-            color: #ffffff; /* Change the text color to white for contrast */
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Softer and more diffused shadow */
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
             position: absolute;
             animation: bounce 4s infinite ease-in-out;
             max-width: 90%;
             padding: 8px 12px;
             border-radius: 8px;
-            background-color: rgba(0, 0, 0, 0.4); /* Subtle dark overlay for text background */
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Media query for devices with a max-width of 600px (phones) */
+        @media only screen and (max-width: 600px) {
+            .bouncing-text {
+                font-size: 1.5em; /* Adjust text size for smaller screens */
+                padding: 6px 10px;
+            }
+
+            body {
+                background-size: contain; /* Ensure the entire image is visible on smaller screens */
+                background-position: center; /* Center the image */
+            }
         }
 
         @keyframes bounce {
@@ -46,6 +60,7 @@
                 left: 5%;
             }
         }
+
     </style>
 </head>
 <body>
