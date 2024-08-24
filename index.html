@@ -17,8 +17,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('image2.jpg') no-repeat center center fixed;
-            background-size: cover; /* Ensures the background covers the screen */
+            background-image: url('image2.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%; /* Forces the image to stretch and cover the entire screen */
             font-family: 'Helvetica Neue', sans-serif;
         }
 
@@ -64,6 +66,7 @@
                 left: 5%;
             }
         }
+
 
     </style>
 </head>
