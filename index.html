@@ -20,7 +20,8 @@
             background-image: url('image2.jpg');
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 100% 100%; /* Forces the image to stretch and cover the entire screen */
+            background-size: cover;
+            background-attachment: fixed;
             font-family: 'Helvetica Neue', sans-serif;
         }
 
@@ -36,15 +37,11 @@
             background-color: rgba(0, 0, 0, 0.4);
         }
 
-        /* Media query for devices with a max-width of 600px (phones) */
-        @media only screen and (max-width: 600px) {
-            .bouncing-text {
-                font-size: 1.5em; /* Adjust text size for smaller screens */
-                padding: 6px 10px;
-            }
-
+        /* Media query specifically targeting iPhones */
+        @media screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
             body {
-                background-size: cover; /* Ensure the image covers the screen on small devices */
+                background-size: 100vw 100vh; /* Force background to cover the entire screen */
+                background-attachment: scroll; /* Adjust the attachment to avoid issues on mobile */
             }
         }
 
@@ -67,7 +64,7 @@
             }
         }
 
-
+ 
     </style>
 </head>
 <body>
