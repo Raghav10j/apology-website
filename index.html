@@ -11,8 +11,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('image2.jpg') no-repeat center center/cover;
-            background-size: cover; /* Ensure the background covers the screen */
+            background: url('image2.png') no-repeat center center;
+            background-size: cover; /* Ensures the background covers the screen */
             overflow: hidden;
             font-family: 'Helvetica Neue', sans-serif;
         }
@@ -37,29 +37,9 @@
             }
 
             body {
-                background-size: contain; /* Ensure the entire image is visible on smaller screens */
-                background-position: center; /* Center the image */
-            }
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                top: 5%;
-                left: 5%;
-            }
-            25% {
-                top: 5%;
-                left: 75%;
-            }
-            50% {
-                top: 75%;
-                left: 75%;
-            }
-            75% {
-                top: 75%;
-                left: 5%;
-            }
-        }
+                background-size: cover; /* Ensure the image covers the screen on small devices */
+                background-position: center; /* Keep the image centered */
+                background-attachment: fixed; /* Prevent the image from moving when scroll
 
     </style>
 </head>
